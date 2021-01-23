@@ -4,6 +4,11 @@
 # Ignore Gradle build output directory
 build
 
+# Ignore the jdk on this folder required for the useless gradle to work
+jdk-11.0.4/
+
+# Ignore the generated (and manually copied) files and folders 
+gradle/
 /jre/
 /target/
 hello.jar
