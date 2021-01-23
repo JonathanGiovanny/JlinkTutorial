@@ -10,9 +10,13 @@ jar --create --file hello.jar -e com.test.Main -C target/classes/ .
 "/C/Program Files/Java/jdk-11.0.4/bin/java.exe" -jar hello.jar
 
 3. Jlink => Create the custom jre to run the jar
+ 3.1. compress = 1 => Level 1: Constant string sharing
 jlink --compress=1 --add-modules java.base --output jre
 
- 3.1. Run the app with the custom JRE
-	jre/bin/java -jar hello.jar
+or put the complete path to the Jlink if you have multiple jdks installed
+C\:/Program\ Files/Java/jdk-11.0.4/bin/jlink.exe
+
+4. Run the app with the custom JRE
+jre/bin/java -jar hello.jar
 
 
