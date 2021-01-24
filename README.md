@@ -1,6 +1,7 @@
 Based on this tutorial:
 https://medium.com/@greut/java11-jlink-and-docker-2fec885fb2d
 
+-------------------
 1. Using Gradle to create the jar:
 
 1.1. Run using the correct JDK version: (copy the jdk to this folder due to permissions on the original path)
@@ -16,7 +17,7 @@ gradle build -Dorg.gradle.java.home=jdk-11.0.4/ --stacktrace
 ```
 jar --create --file hello.jar -e com.test.Main -C target/classes/ .
 ```
-
+-------------------
 
 2. Executing the jar
 ```
@@ -39,7 +40,7 @@ C\:/Program\ Files/Java/jdk-11.0.4/bin/jlink.exe
 jre/bin/java -jar hello.jar
 ```
 
-
+-------------------
 
 2. Build Docker image build (The same when you already have the jar file, Jlink to build the jre to use)
 
