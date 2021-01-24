@@ -20,4 +20,4 @@ ENV PATH="$PATH:$JAVA_HOME/bin"
 COPY --from=packager "$JAVA_HOME" "$JAVA_HOME"
 COPY build/libs/application.jar app.jar
 
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/app.jar", "-XX:+UseContainerSupport", "-Xmx175m", "-Xms175m"]

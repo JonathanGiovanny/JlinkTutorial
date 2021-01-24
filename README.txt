@@ -28,8 +28,15 @@ jre/bin/java -jar hello.jar
 
 
 2. Build Docker image build (The same when you already have the jar file, Jlink to build the jre to use)
+ 2.1. Docker image built using this link: https://stackoverflow.com/questions/53669151/java-11-application-as-lightweight-docker-image
 docker build -t jlink/0-Hello .
 
 3. Run Docker image
  3.1. rm to remove the image after usage
 docker run -rm jlink/0-Hello
+
+or limitting the container limit (on linux console)
+docker run --rm -it --memory="200m" --memory-swap="400m" jlink/0-hello
+
+or on winbash
+docker run --rm -i --memory="200m" --memory-swap="400m" jlink/0-hello
